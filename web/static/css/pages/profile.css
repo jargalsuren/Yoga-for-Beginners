@@ -1,0 +1,14 @@
+.saved_videos {}
+
+.saved_videos_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.saved_videos_grid_item {
+  background-color: #F5f5f5;
+  height: 250px;
+  border-radius: 15px;
+}

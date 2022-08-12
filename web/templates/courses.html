@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}COURSES{% endblock %}
+
+{% block header %}
+<header>
+</header>
+{% endblock %}
+
+{% block content %}
+<!-- DB: TO INTEGRATE WITH BACKEND, I HAVE ADDED COURSES model file - Rhythm -->
+<div class="courses-container">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Course</h6>
+        <h2>Week One</h2>
+        <a href="#">View all <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-info">
+        <div class="progress-container">
+          <div class="progress"></div>
+          <span class="progress-text">
+            1/5 Challenges
+          </span>
+        </div>
+        <h6>Chapter 1</h6>
+        <h2>5 basic poses</h2>
+        <button class="btn" href="/course/weekOne/">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-container">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Course</h6>
+        <h2>Week Two</h2>
+        <a href="#">View all<i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-info">
+        <div class="progress-container">
+          <div class="progress"></div>
+          <span class="progress-text">
+            1/5 Challenges
+          </span>
+        </div>
+        <h6>Chapter 1</h6>
+        <h2>Breathe in, Breathe out</h2>
+        <button class="btn" href="/course/weekOne/">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="courses-container">
+    <div class="course">
+      <div class="course-preview">
+        <h6>Course</h6>
+        <h2>Week Three</h2>
+        <a href="#">View all<i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-info">
+        <div class="progress-container">
+          <div class="progress"></div>
+          <span class="progress-text">
+            1/5 Challenges
+          </span>
+        </div>
+        <h6>Chapter 1</h6>
+        <h2>Body, Mind & Soul</h2>
+        <button class="btn" href="/course/weekOne/">Continue</button>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

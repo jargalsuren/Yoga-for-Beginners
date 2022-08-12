@@ -1,0 +1,80 @@
+
+   
+{% extends "base.html" %} {% block content %}
+
+<!--Registration form via WTForm-->
+
+<div class="container" >
+  <form method="POST" action="">
+    {{form.hidden_tag()}}
+    <fieldset class="column" style = "border: 0;">
+      <h2 class="header_login_top" style="text-align:center">Start your yoga journey today!</h2>
+      <h4 class="header_login" style="text-align:center">Register below to get started ✨ </h4>
+      
+      <div style="text-align:center">
+        <label>👤</label>
+        {% if form.username.errors %}
+        {{form.username()}}
+        <div class="alert">
+          {% for error in form.username.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.username(placeholder="create a username...")}}
+        {% endif %}
+      </div>
+
+      <div style="text-align:center">
+        <label> 📧 </label>
+        {% if form.email.errors %}
+        {{form.email()}}
+        <div class="alert">
+          {% for error in form.email.errors %}
+          <span>{{ error }}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.email(placeholder="type your email...")}}
+        {% endif %}
+      </div>
+      
+      <div style="text-align:center">
+        <label> 🔑 </label>
+        {% if form.password.errors %}
+        {{form.password()}}
+        <div class="alert">
+          {% for error in form.password.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.password(placeholder="create a password...")}}
+        {% endif %}
+      </div>
+      
+      <div style="text-align:center">
+        <label> 🔑 </label>
+        {% if form.password_confirm.errors %}
+        {{form.password_confirm()}}
+        <div class="alert">
+          {% for error in form.password_confirm.errors %}
+          <span>{{error}}</span>
+          {% endfor %}
+        </div>
+        {% else %}
+        {{form.password_confirm(placeholder="type password again...")}}
+        {% endif %}
+      </div>
+    
+      <div style="text-align:center">
+        {{form.submit()}}
+      </div>
+      
+    </fieldset>
+  </form>
+  
+  <h5 class="header_login" style="text-align:center">Already registered? Log in to your account <a href="/login">here</a></h5>
+</div>
+
+{% endblock content %}

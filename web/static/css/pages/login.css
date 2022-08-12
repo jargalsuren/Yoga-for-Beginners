@@ -1,0 +1,179 @@
+.header{
+    padding: 30px;
+    text-align: left;
+    background: var(--fadedblue);
+    position: relative;
+    height: auto;
+    border-bottom: thick solid white;
+}
+
+#logo{
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+
+#login{
+    margin-left: 1150px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+body {
+    height: 1000vh;
+    justify-content: center;
+    background-color: var(--fadedblue);
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    max-width: 440px;
+    height: fit-content;
+    box-shadow: 10px 10px 10px 15px  rgba(0, 0, 0, 0.1);
+    margin: 60px 510px;
+}
+
+.container .forms {
+    width: 200%;
+    display: flex;
+    height: 100%;
+    align-items: left;
+    transition: height 0.4s ease;
+}
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    background: whitesmoke;
+    transition: margin-left 0.38s ease;
+    
+}
+
+.container.switch .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.38s ease, opacity 0.3s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.16s ease;
+}
+
+/*shows signup after hiding login form*/
+.container.switch .signup {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+/*adjust height for signup form*/
+.container.switch .forms {
+    height: 440px;
+}
+
+
+.container .form .title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-right: 50px;
+    
+}
+
+.form .field {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 33px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-bottom: 2px solid var(--fadedblue);
+    border-top: 2px solid transparent;
+    transition: border-bottom-color 0.39s ease;
+}
+
+.field input:is(:focus, :valid) {
+    border-bottom-color: var(--lightblue);
+}
+
+.field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a9a9a9;
+    font-size: 22px;
+    transition: color 0.39s ease;
+}
+
+.field input:is(:focus, :valid) ~ i {
+    color: var(--blue);
+}
+
+/* red for invalid */
+.field input:invalid {
+    color: #ff6961;
+}
+
+.field i.icon {
+    left: 0;
+}
+
+.field i.showHidePwd {
+    right: 0;
+    padding: 10px;
+}
+
+.form .forgot {
+    display: flex;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.form .text {
+    font-size: 14px;
+}
+.form a.text {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.form .btn input {
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: var(--blue);
+    transition: all 0.69s ease;
+    display: block;
+}
+
+.btn input:hover {
+    background-color: var(--navy);
+}
+
+/* bottom text with button to switch forms */
+.sign_up-switcher {
+    margin-top: 10px;
+    text-align: center;
+
+}
+.log_in-switcher{
+    margin-top: 20px;
+    text-align: center;
+}
